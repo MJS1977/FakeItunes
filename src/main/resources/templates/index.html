@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<link rel="stylesheet" th:href="@{/css/main.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+    <h5>5 RANDOM ARTISTS</h5>
+       <div class="col-sm-4" th:each="artist:${randomArtists}">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${artist.getName()}"></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <h5>5 RANDOM GENRES</h5>
+    <div class="col-sm-4" th:each="genre:${randomGenres}">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${genre.getGenre()}"></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <h5>5 RANDOM SONGS</h5>
+    <div class="col-sm-4" th:each="song:${randomSongs}">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${song.getName()}"></h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<form class="searchBox" action="action_page.php">
+    <input type="text" placeholder="Search for a song..." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+</body>
+</html>

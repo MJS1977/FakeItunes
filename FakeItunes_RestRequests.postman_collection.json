@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "f8e118ef-f8ca-47bb-9c58-ea6655059583",
+		"name": "FakeItunes_RestRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Selects all the customers from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"customerId\": \"100\",\r\n        \"firstName\": \"rywh\",\r\n        \"lastName\": \"nshs\",\r\n        \"country\": \"moon\",\r\n        \"postalCode\": \"356735737\",\r\n        \"phone\": \"+56 (0)2 635 4444\",\r\n        \"email\": \"nryysjsrysyrns\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Adds a new customer to the database"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/customers/100",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"customerId\": \"100\",\r\n        \"firstName\": \"Monster\",\r\n        \"lastName\": \"BoY\"\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"100"
+					]
+				},
+				"description": "Update Existing Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customers/country",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"country"
+					]
+				},
+				"description": "This request returns the amount of customers in each country in descending order."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/customers/spenders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customers/spenders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"spenders"
+					]
+				},
+				"description": "This query finds the customers who are the highest spenders."
+			},
+			"response": []
+		}
+	]
+}

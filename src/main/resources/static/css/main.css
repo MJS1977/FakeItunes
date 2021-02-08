@@ -1,0 +1,18 @@
+.container {
+    margin: auto;
+    width: 50%;
+    border: 3px lightblue;
+    padding: 2px;
+    display: flex;
+}
+
+.row {
+    background: lightgray;
+    flex-basis: 400px;
+    height: 300px;
+    margin: 10px;
+}
+
+.searchBox{
+    text-align: center;
+}
